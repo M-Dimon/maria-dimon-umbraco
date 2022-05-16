@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umbraco Assignment</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="review.html">JoJo Review</a>
+            </li>
+            <li>
+                <a href="about.html">About Me</a>
+            </li>
+        </ul>
+    </nav>
+    <header>
+        <div class="header-content">
+            <h1>Searchable Dropdown</h1>
+            <h3>Maria Nordahl Dimon - 2022</h3>
+            <p>The following dropdowns is based on the code from, W3 School and Educative.io. <br>  </p> 
+            <p>Link to searchable dropdow from w3 School <a href="https://www.w3schools.com/howto/howto_js_filter_dropdown.asp">W3 School</a> </p>
+            <p>Link to searchable dropdown from Educative.io <a href="https://www.educative.io/edpresso/how-to-make-a-dropdown-with-searchable-text">Educative siden</a></p>
+        </div>
+    </header>
+    <section>
+        <div class="row">
+            <div class="column">
+                <div class="option-1">
+                    <h2>Searcable dropdown</h2>
+                    <p><b><i>Based on the code found on W3 school. </i></b><br> 
+                        Here it works like a dropdown menu element, and can thus also be used to navigate the site. It is built up around a button that switches between making the dropdown content visible or invisible.<br> <br>
+
+                        Once the button is pressed, the content and search bar become visible and usable, making it so the user can search for
+                        content in the dropdown, making it easier to find and navigate the site.<br><br>
+
+                        Currently, I do not know enough about API in regards to Dropdowns, as such I have therefore chosen to omit it in the dropdowns. However, in the future, connecting the dropdown to a database would make it easy to add or remove elements from the dropdown list.<br><br>
+
+                        This could be done either by accessing the database directly to enter the information or by incorporating the add or delete as buttons, using JS functions PHP to access the database, thus making it so users themself can edit the dropdown from the site directly.
+                    </p>
+                    <div class="dropdown">
+                        <button onclick="myFunction()" class="menubtn">Dropdown Menu Elements</button>
+                        <div id="dropDown" class="dropDown-content">
+                            <input type="text" placeholder="Search.." id="searchInput" onkeyup="filterFunction()">
+                            <a href="index.html">Home</a>
+                            <a href="review.html">Jojo Review</a>
+                            <a href="about.html">About Me</a>
+                            <a href="extra/cactus.html">Art Project</a>
+                            <a href="#other2">Other 2</a>
+                            <a href="#other3">Other 3</a>
+                            <a href="#other">Other 4</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="option-2">
+                    <h2>Option Dropdown</h2>
+                    <p><b><i>Based on the code found on Educative.io.</i></b> <br>
+                         
+                        Used as a pick one option dropdown. In this case with some video games. It is built around the select element, which activates the dropdown showcasing the list. Unlike the other dropdown, here the search bar is visible and accessible from the start, they do, however, have the same filter function.<br><br>
+
+                        Like the other, connecting the dropdown to a database would make it possible to add or remove elements on the list.
+                    </p>
+                    <h4>What is your favorite game</h4>
+                    <div class="drop-down-option">
+                        <div id="dropdown-options" class="dropdown-options-content">
+                            <input type="text" placeholder="Search.." id="search-input" onkeyup="Func()"> <br>
+                            <select>
+                                <option>Stardew Valley</option>
+                                <option>The Sims</option>
+                                <option>Overwatch</option>
+                                <option>LOL</option>
+                                <option>Dota</option>
+                                <option>Animal Crossing</option>
+                                <option>Tomb Raider</option>
+                                <option>Horizon Zero Dawn</option>
+                                <option>D&D</option>
+                                <option>Diablo</option>
+                                <option>Craftopia</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>Made by Maria Nordahl Dimon - 2022</p>
+        </footer>
+    </section>
+    <script>
+        // Activates the button, switching between the dropdown being visible and non visible. 
+        function myFunction() {
+            document.getElementById("dropDown").classList.toggle("show");
+        }
+        // Makes it so you can filter the content in the dropdown using the search bar. As you type in the search bar, the options on the dropdown gets narrowed. 
+        function filterFunction() {
+            var input, filter, ul, li, a, i;
+            input = document.getElementById("searchInput");
+            filter = input.value.toUpperCase();
+            div = document.getElementById("dropDown");
+            a = div.getElementsByTagName("a");
+            for (i = 0; i < a.length; i++) {
+                txtValue = a[i].textContent || a[i].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    a[i].style.display = "";
+                } else {
+                    a[i].style.display = "none";
+                }
+            }
+        }
+        
+        // Function for the second dropdown. 
+        function Func() {
+            var input, filter, a;
+
+            // Recieves the input the user types into the text box. 
+            input = document.getElementById("search-input");
+
+            // Converts the users input to upper case. 
+            filter = input.value.toUpperCase();
+
+            div = document.getElementById("dropdown-options");
+
+            // Fetches all the options in the dropdown, as a list of. 
+            a = div.getElementsByTagName("option");
+
+            // Compares the search input with the list, and outputs the options which contain the users input, if any exist. 
+            for (var i = 0; i < a.length; i++) {
+                txtValue = a[i].textContent || a[i].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    a[i].style.display = "";
+                } else {
+                    a[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

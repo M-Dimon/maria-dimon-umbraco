@@ -1,0 +1,234 @@
+/* Colors
+Pri - #932610 - Dark red
+Secc - #B83014 - Light Red
+Tri - #DEE1E3 - Light Grey
+Text - #262730 - Charcoal
+Sec text - #FFFFFF - White
+*/ 
+* {
+    box-sizing: border-box;
+}
+body {
+    text-align: left;
+    background-color: #FFFFFF;
+    color: #262730;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*  Navbar CSS  */
+ul {
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    background-color: #932610;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #F3F1F9;
+    text-align: center;
+    padding: 2vmin 3vmin;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #B83014;
+}
+
+/*  Header CSS  */
+header {
+    border-bottom: 1vmin solid #262730;
+}
+
+.header-content {
+    margin-left: 12vmin;
+    margin-right: 12vmin;
+    margin-bottom: 4vmin;
+}
+
+/*  Page content CSS  */
+.row {
+    margin-left: 12vmin;
+    margin-bottom: 4vmin;
+}
+.column {
+    float: left;
+    width: 90vmin;
+    margin-right: 8vmin;
+}
+
+/*  Clear floats after the columns  */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*  CSS for the first dropdown  */
+.menubtn {
+    background-color: #262730;
+    color: #F3F1F9;
+    padding: 2vmin;
+    font-size: 2vmin;
+    border: 0;
+    border-radius: 2vmin;
+    cursor: pointer;
+    margin-bottom: 1vmin;
+    width: 40vmin;
+}
+.menubtn:hover,
+.menubtn:focus {
+    background-color: #B83014;
+    color: #F3F1F9;
+}
+#searchInput {
+    box-sizing: border-box;
+    background-image: url('magnifying-glass-solid.svg');
+    background-position: 1vmin 1vmin;
+    background-repeat: no-repeat;
+    background-size: 2.5vmin;
+    font-size: 2.5vmin;
+    padding: 1vmin 4vmin 1vmin 5vmin;
+    border: none;
+    border-bottom: 0.1vmin solid #ddd;
+    width: 40vmin;
+}
+#searchInput:focus {
+    outline: 1vmin solid #ddd;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+    height: 50vmin;
+}
+.dropDown-content {
+    display: none;
+    position: absolute;
+    background-color: #DEE1E3;
+    overflow: auto;
+    border: 1px solid #ddd;
+    z-index: 1;
+    border-radius: 1vmin;
+}
+.dropDown-content a {
+    color: black;
+    padding: 1vmin 1vmin;
+    text-decoration: none;
+    display: block;
+}
+.dropdown a:hover {
+    background-color: #B83014;
+    color: #F3F1F9;
+}
+.show {
+    display: block;
+}
+
+/*  CSS for the second dropdown  */
+#search-input {
+    box-sizing: border-box;
+    background-image: url('magnifying-glass-solid.svg');
+    background-position: 1vmin 1vmin;
+    background-repeat: no-repeat;
+    background-size: 2.5vmin;
+    background-color: #ddd;
+    font-size: 2.5vmin;
+    padding: 1vmin 4vmin 1vmin 5vmin;
+    border: none;
+    border-radius: 1vmin;
+    border-bottom: 0.1vmin solid #262740;
+    width: 40vmin;
+    margin-bottom: 1vmin;
+}
+
+#search-input:focus {
+    outline: 0.2vmin solid #262740;
+}
+
+select {
+    background-color: #DEE1E3;
+    color: #262730;
+    width: 40vmin;
+    border-radius: 1vmin;
+}
+
+option {
+    background-color: #DEE1E3;
+    color: #262730;
+}
+
+
+/*  Footer CSS  */
+footer {
+    margin: 0;
+    position: relative;
+    bottom: 0;
+    text-align: left;
+    background-color: #932610;
+    color: #F3F1F9;
+    padding: 1vmin;
+    width: 100%;
+}
+footer p {
+    margin-left: 8vmin;
+}
+
+.movie {
+    margin: 6vmin;
+}
+.movie img {
+    height: 90vmin;
+    border: 0.5vmin solid #262730;
+    border-radius: 1vmin;
+}
+
+.fa-star {
+    color: #262730;
+}
+
+.checked {
+    color: #D08E25;
+}
+ /*  About me page CSS  */
+.album {
+    height: 10vmin;
+}
+
+.imgbtn {
+    background-color: #262730;
+    color: #F3F1F9;
+    padding: 2vmin;
+    font-size: 2vmin;
+    border: 0;
+    border-radius: 2vmin;
+    cursor: pointer;
+    margin-bottom: 1vmin;
+    width: 40vmin;
+}
+
+.imgbtn:hover,
+.imgbtn:focus {
+    background-color: #B83014;
+    color: #F3F1F9;
+}
+
+.album-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: absolute;
+    overflow: auto;
+    z-index: 1;
+}
+
+.album-content p img {
+    height: 20vmin;
+    border: 0.5vmin solid #262730;
+    border-radius: 1.5vmin;
+    margin: 0.5vmin;
+}
